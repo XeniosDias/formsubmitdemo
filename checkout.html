@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Vitality Shop</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="checkout.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-leaf"></i> Vitality Shop</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Produkte</a></li>
+                    <li><a href="kontakt.html"><i class="fas fa-envelope"></i> Kontakt</a></li>
+                    <li><a href="warenkorb.html"><i class="fas fa-shopping-cart"></i> Warenkorb (<span id="cart-item-count-header">0</span>)</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="checkout">
+            <h2>Bestellübersicht & Versand</h2>
+            <div class="checkout-grid">
+                <div class="order-summary">
+                    <h3><i class="fas fa-clipboard-list"></i> Ihre Bestellung</h3>
+                    <div id="checkout-items">
+                        <!-- Checkout items will be loaded here with JavaScript -->
+                    </div>
+                    <div class="summary-total">
+                        <strong>Gesamtsumme: <span id="checkout-total">0.00</span> €</strong>
+                    </div>
+                </div>
+                <div class="shipping-details">
+                    <h3><i class="fas fa-truck"></i> Versandinformationen</h3>
+                    <form id="shipping-form">
+                        <div class="form-group">
+                            <label for="name"><i class="fas fa-user"></i> Name:</label>
+                            <input type="text" id="name" name="name" required placeholder="Ihr vollständiger Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email"><i class="fas fa-envelope"></i> E-Mail:</label>
+                            <input type="email" id="email" name="email" required placeholder="Ihre E-Mail-Adresse">
+                        </div>
+                        <div class="form-group">
+                            <label for="address"><i class="fas fa-home"></i> Adresse:</label>
+                            <input type="text" id="address" name="address" required placeholder="Straße und Hausnummer">
+                        </div>
+                        <div class="form-group">
+                            <label for="city"><i class="fas fa-city"></i> Stadt:</label>
+                            <input type="text" id="city" name="city" required placeholder="Ihre Stadt">
+                        </div>
+                        <div class="form-group">
+                            <label for="zip"><i class="fas fa-map-marker-alt"></i> Postleitzahl:</label>
+                            <input type="text" id="zip" name="zip" required placeholder="PLZ">
+                        </div>
+                        <div class="form-group">
+                            <label for="country"><i class="fas fa-globe"></i> Land:</label>
+                            <input type="text" id="country" name="country" value="Deutschland">
+                        </div>
+                        <h3><i class="fas fa-credit-card"></i> Zahlungsmethode</h3>
+                        <div class="payment-options">
+                            <button type="button" class="payment-button" id="paypal-option">
+                                <img src="pictures/placeholder-paypal.png" alt="PayPal Placeholder">
+                            </button>
+                            <button type="button" class="payment-button" id="crypto-option">
+                                <img src="pictures/placeholder-crypto.png" alt="Krypto Placeholder">
+                            </button>
+                        </div>
+                        <button type="submit" class="place-order-button">
+                            <i class="fas fa-check-circle"></i> Bestellung aufgeben
+                        </button>
+                        <div id="order-message" class="order-message"></div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Vitality Shop. Alle Rechte vorbehalten.</p>
+            <nav>
+                <ul>
+                    <li><a href="#">AGB</a></li>
+                    <li><a href="#">Datenschutz</a></li>
+                    <li><a href="#">Impressum</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

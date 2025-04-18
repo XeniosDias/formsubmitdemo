@@ -1,57 +1,103 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <title>Hausverwaltung Living – .WEG Verwaltung, Vermietung, Ankauf, Verkauf</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Google Fonts für ein modernes Schriftbild -->
-  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
-  <!-- Swiper CSS für den Referenz-Slider und Hero-Slider -->
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-  <!-- Haupt CSS -->
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vitality Shop - Ihre Quelle für Wohlbefinden</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  
-<!-- KONTAKTFORMULAR -->
-<section class="contact-section">
-  <h2>Kontaktformular</h2>
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-leaf"></i> Vitality Shop</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active"><i class="fas fa-home"></i> Produkte</a></li>
+                    <li><a href="kontakt.html"><i class="fas fa-envelope"></i> Kontakt</a></li>
+                    <li><a href="warenkorb.html"><i class="fas fa-shopping-cart"></i> Warenkorb (<span id="cart-item-count">0</span>)</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
+    <main class="container">
+        <section class="product-list">
+            <h2>Unsere Top-Produkte</h2>
+            <div class="product-grid">
+                <div class="product-card" data-product-id="magnesium-komplex">
+                    <img src="pictures/placeholder-magnesium.jpg" alt="Magnesium Placeholder">
+                    <div class="product-card-content">
+                        <h3>Magnesium Komplex</h3>
+                        <p>Hochdosiertes Magnesium für Muskeln und Nerven.</p>
+                        <span class="price">19.99 €</span>
+                        <button class="buy-button" data-product="Magnesium Komplex" data-price="19.99">
+                            <i class="fas fa-cart-plus"></i> In den Warenkorb
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card" data-product-id="vitamin-d-k2">
+                    <img src="pictures/placeholder-vitamin-d.jpg" alt="Vitamin D Placeholder">
+                    <div class="product-card-content">
+                        <h3>Vitamin D3 + K2</h3>
+                        <p>Unterstützt Ihr Immunsystem und die Knochengesundheit.</p>
+                        <span class="price">24.50 €</span>
+                        <button class="buy-button" data-product="Vitamin D3 + K2" data-price="24.50">
+                            <i class="fas fa-cart-plus"></i> In den Warenkorb
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card" data-product-id="b-komplex">
+                    <img src="pictures/placeholder-b-complex.jpg" alt="B-Komplex Placeholder">
+                    <div class="product-card-content">
+                        <h3>Vitamin B-Komplex</h3>
+                        <p>Für Energie und ein starkes Nervensystem.</p>
+                        <span class="price">17.99 €</span>
+                        <button class="buy-button" data-product="Vitamin B-Komplex" data-price="17.99">
+                            <i class="fas fa-cart-plus"></i> In den Warenkorb
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card" data-product-id="omega-3">
+                    <img src="pictures/placeholder-omega3.jpg" alt="Omega-3 Placeholder">
+                    <div class="product-card-content">
+                        <h3>Omega-3 Fischöl</h3>
+                        <p>Gut für Herz und Gehirnfunktion.</p>
+                        <span class="price">29.99 €</span>
+                        <button class="buy-button" data-product="Omega-3 Fischöl" data-price="29.99">
+                            <i class="fas fa-cart-plus"></i> In den Warenkorb
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <section class="payment-options">
+            <h2>Sichere Bezahlung</h2>
+            <div class="payment-methods">
+                <div class="paypal-placeholder">
+                    <img src="pictures/placeholder-paypal.png" alt="PayPal Placeholder">
+                </div>
+                <div class="crypto-placeholder">
+                    <img src="pictures/placeholder-crypto.png" alt="Krypto Placeholder">
+                </div>
+            </div>
+        </section>
+    </main>
 
-  
-  <form id="contact-form" action="https://formsubmit.co/xenios7dias1@gmail.com" method="POST">  
-    <label for="contact-name">Name</label>
-    <input type="text" id="contact-name" name="contact-name" placeholder="Name" required>
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Vitality Shop. Alle Rechte vorbehalten.</p>
+            <nav>
+                <ul>
+                    <li><a href="#">AGB</a></li>
+                    <li><a href="#">Datenschutz</a></li>
+                    <li><a href="#">Impressum</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
 
-    <label for="contact-email">E-Mail</label>
-    <input type="email" id="contact-email" name="contact-email" placeholder="E-Mail" required>
-
-    <label for="contact-phone">Telefonnummer</label>
-    <input type="tel" id="contact-phone" name="contact-phone" placeholder="+49 ...">
-
-    <p>Betreff</p>
-    <!-- Entferne den alten 'checkbox-group'-Block und verwende stattdessen diesen 'radio-group'-Block -->
-    <div class="radio-group">
-      <label><input type="radio" name="betreff" value="Hausverwaltung" required> Hausverwaltung</label>
-      <label><input type="radio" name="betreff" value="Vermietung"> Vermietung</label>
-      <label><input type="radio" name="betreff" value="Baubegleitung"> Baubegleitung</label>
-      <label><input type="radio" name="betreff" value="Ankauf/Verkauf Immobilien"> Ankauf/Verkauf</label>
-      <label><input type="radio" name="betreff" value="Sonstiges"> Sonstiges</label>
-    </div>
-
-    <label for="contact-message">Nachricht</label>
-    <textarea id="contact-message" name="contact-message" rows="5" placeholder="Nachricht hier eingeben"></textarea>
-
-    <div class="privacy-check">
-      <input type="checkbox" id="datenschutz" name="datenschutz" required>
-      <label for="datenschutz">Ich akzeptiere die <a href="#">Datenschutzerklärung</a>.</label>
-    </div>
-
-    <button type="submit">Senden</button>
-  </form>
-</section>
-
-  </footer>
+    <script src="script.js"></script>
 </body>
 </html>
